@@ -8,8 +8,8 @@ public class DrinkDispenser
     {
         Ingredient Coffee = new Ingredient() { Name = "Café", Cost = 1m };
         Ingredient Water = new Ingredient() { Name = "Eau", Cost = 0.2m };
-        Recipe Expresso = new() { Name = "Expresso", Ingredients = new() { Coffee, Water } };
-        Recipe LongCoffee = new() { Name = "Café allongé", Ingredients = new() { Coffee, Water, Water } };
+        Recipe Expresso = new() { Name = "Expresso", Ingredients = new() { new Dose() { Ingredient = Coffee, Quantity = 1 }, new Dose() { Ingredient = Water, Quantity = 1 } } };
+        Recipe LongCoffee = new() { Name = "Café allongé", Ingredients = new() { new Dose() { Ingredient = Coffee, Quantity = 1 }, new Dose() { Ingredient = Water, Quantity = 2 } } };
 
         if (recipeName == Expresso.Name)
             return Expresso.CostPrice * PriceMargin;
