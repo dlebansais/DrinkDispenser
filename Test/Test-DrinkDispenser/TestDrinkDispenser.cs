@@ -52,4 +52,16 @@ public class TestDrinkDispenser
         Assert.That(TestDose.Ingredient, Is.EqualTo(TestIngredient));
         Assert.That(TestDose.Quantity, Is.EqualTo(1));
     }
+
+    [Test]
+    public void RecipeCreator()
+    {
+        RecipeBuilder TesRecipeBuilder = new();
+
+        TesRecipeBuilder.AddIngredient("Café", 1m);
+        TesRecipeBuilder.AddIngredient("Eau", 0.2m);
+
+        Assert.That(TesRecipeBuilder.GetIngredient("Café").Cost, Is.EqualTo(1m));
+        Assert.That(TesRecipeBuilder.GetIngredient("Eau").Cost, Is.EqualTo(0.2m));
+    }
 }
