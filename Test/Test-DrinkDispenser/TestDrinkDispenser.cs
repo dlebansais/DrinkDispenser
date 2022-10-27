@@ -42,4 +42,14 @@ public class TestDrinkDispenser
         Assert.That(TestIngredient.Name, Is.EqualTo("Café"));
         Assert.That(TestIngredient.Cost, Is.EqualTo(1m));
     }
+
+    [Test]
+    public void FirstDose()
+    {
+        Ingredient TestIngredient = new() { Name = "Café", Cost = 1m };
+        Dose TestDose = new() { Ingredient = TestIngredient, Quantity = 1};
+
+        Assert.That(TestDose.Ingredient, Is.EqualTo(TestIngredient));
+        Assert.That(TestDose.Quantity, Is.EqualTo(1));
+    }
 }
