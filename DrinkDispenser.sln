@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrinkDispenser", "DrinkDispenser\DrinkDispenser.csproj", "{47B93E7D-FDD6-44A1-AB18-CC82C6827230}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test-DrinkDispenser", "Test\Test-DrinkDispenser\Test-DrinkDispenser.csproj", "{D3670231-60FA-45E9-8923-248AAC5F0B86}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47B93E7D-FDD6-44A1-AB18-CC82C6827230}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47B93E7D-FDD6-44A1-AB18-CC82C6827230}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47B93E7D-FDD6-44A1-AB18-CC82C6827230}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47B93E7D-FDD6-44A1-AB18-CC82C6827230}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3670231-60FA-45E9-8923-248AAC5F0B86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3670231-60FA-45E9-8923-248AAC5F0B86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3670231-60FA-45E9-8923-248AAC5F0B86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3670231-60FA-45E9-8923-248AAC5F0B86}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3BD44D2A-2C40-40C4-8FA2-8A11D3CE1150}
+	EndGlobalSection
+EndGlobal
