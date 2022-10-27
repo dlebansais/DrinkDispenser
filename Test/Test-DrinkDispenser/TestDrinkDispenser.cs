@@ -1,15 +1,24 @@
 ﻿namespace Test_DrinkDispenser;
 
-using NUnit;
+using DrinkDispenser;
 using NUnit.Framework;
 
 [TestFixture]
 public class TestDrinkDispenser
 {
     [Test]
-    public void TestBasic()
+    public void Basic()
     {
-        double Price = DrinkDispenser.DrinkDispenser.GetDrinkPrice("Expresso");
-        Assert.That(Price, Is.EqualTo(1.2 * 1.3));
+        decimal Price = DrinkDispenser.GetDrinkPrice("Expresso");
+        Assert.That(Price, Is.EqualTo(1.2m * 1.3m));
+    }
+
+    [Test]
+    public void FirstRecipe()
+    {
+        Recipe TestRecipe = new();
+        decimal CostPrice = TestRecipe.CostPrice;
+
+        Assert.That(CostPrice, Is.EqualTo(1.2m));
     }
 }
