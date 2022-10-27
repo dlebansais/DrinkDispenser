@@ -19,7 +19,7 @@ public class TestDrinkDispenser
     [Test]
     public void Expresso()
     {
-        Recipe TestRecipe = new() { Name = "Expresso", CostPrice = 1.2m };
+        Recipe TestRecipe = new() { Name = "Expresso", Ingredients = new() { new Ingredient() { Name = "Café", Cost = 1m }, new Ingredient() { Name = "Eau", Cost = 0.2m } } };
 
         Assert.That(TestRecipe.CostPrice, Is.EqualTo(1.2m));
         Assert.That(TestRecipe.Name, Is.EqualTo("Expresso"));
@@ -28,7 +28,7 @@ public class TestDrinkDispenser
     [Test]
     public void LongCoffee()
     {
-        Recipe TestRecipe = new() { Name = "Café allongé", CostPrice = 1.4m };
+        Recipe TestRecipe = new() { Name = "Café allongé", Ingredients = new() { new Ingredient() { Name = "Café", Cost = 1m }, new Ingredient() { Name = "Eau", Cost = 0.2m }, new Ingredient() { Name = "Eau", Cost = 0.2m } } };
 
         Assert.That(TestRecipe.CostPrice, Is.EqualTo(1.4m));
         Assert.That(TestRecipe.Name, Is.EqualTo("Café allongé"));
