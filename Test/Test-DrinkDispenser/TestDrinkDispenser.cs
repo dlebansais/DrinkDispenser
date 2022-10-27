@@ -14,11 +14,20 @@ public class TestDrinkDispenser
     }
 
     [Test]
-    public void FirstRecipe()
+    public void Expresso()
     {
-        Recipe TestRecipe = new();
-        decimal CostPrice = TestRecipe.CostPrice;
+        Recipe TestRecipe = new() { Name = "Expresso", CostPrice = 1.2m };
 
-        Assert.That(CostPrice, Is.EqualTo(1.2m));
+        Assert.That(TestRecipe.CostPrice, Is.EqualTo(1.2m));
+        Assert.That(TestRecipe.Name, Is.EqualTo("Expresso"));
+    }
+
+    [Test]
+    public void LongCoffee()
+    {
+        Recipe TestRecipe = new() { Name = "Café allongé", CostPrice = 1.4m };
+
+        Assert.That(TestRecipe.CostPrice, Is.EqualTo(1.4m));
+        Assert.That(TestRecipe.Name, Is.EqualTo("Café allongé"));
     }
 }

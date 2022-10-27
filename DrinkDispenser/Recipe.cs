@@ -2,5 +2,6 @@
 
 public class Recipe
 {
-    public decimal CostPrice { get; set; } = 1.2m;
+    public decimal CostPrice { get; init; }
+    public string Name { get; init; }
 }
