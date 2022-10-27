@@ -6,8 +6,10 @@ public class DrinkDispenser
 
     public static decimal GetDrinkPrice(string recipeName)
     {
-        Recipe Expresso = new() { Name = "Expresso", Ingredients = new() { new Ingredient() { Name = "Café", Cost = 1m }, new Ingredient() { Name = "Eau", Cost = 0.2m } } };
-        Recipe LongCoffee = new() { Name = "Café allongé", Ingredients = new() { new Ingredient() { Name = "Café", Cost = 1m }, new Ingredient() { Name = "Eau", Cost = 0.2m }, new Ingredient() { Name = "Eau", Cost = 0.2m } } };
+        Ingredient Coffee = new Ingredient() { Name = "Café", Cost = 1m };
+        Ingredient Water = new Ingredient() { Name = "Eau", Cost = 0.2m };
+        Recipe Expresso = new() { Name = "Expresso", Ingredients = new() { Coffee, Water } };
+        Recipe LongCoffee = new() { Name = "Café allongé", Ingredients = new() { Coffee, Water, Water } };
 
         if (recipeName == Expresso.Name)
             return Expresso.CostPrice * PriceMargin;
