@@ -9,8 +9,11 @@ public class TestDrinkDispenser
     [Test]
     public void Basic()
     {
-        decimal Price = DrinkDispenser.GetDrinkPrice("Expresso");
-        Assert.That(Price, Is.EqualTo(1.2m * 1.3m));
+        decimal ExpressoPrice = DrinkDispenser.GetDrinkPrice("Expresso");
+        Assert.That(ExpressoPrice, Is.EqualTo(1.2m * 1.3m));
+
+        decimal LongCoffeePrice = DrinkDispenser.GetDrinkPrice("Café allongé");
+        Assert.That(LongCoffeePrice, Is.EqualTo(1.4m * 1.3m));
     }
 
     [Test]
